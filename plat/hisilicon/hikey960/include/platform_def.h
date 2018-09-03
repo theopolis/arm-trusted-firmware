@@ -19,7 +19,7 @@
  */
 
 /* Size of cacheable stacks */
-#define PLATFORM_STACK_SIZE		0x800
+#define PLATFORM_STACK_SIZE		0x1000
 
 #define FIRMWARE_WELCOME_STR		"Booting Trusted Firmware\n"
 
@@ -49,8 +49,8 @@
  * BL1 specific defines.
  */
 #define BL1_RO_BASE			(0x1AC00000)
-#define BL1_RO_LIMIT			(BL1_RO_BASE + 0x10000)
-#define BL1_RW_BASE			(BL1_RO_LIMIT)		/* 1AC1_0000 */
+#define BL1_RO_LIMIT			(BL1_RO_BASE + 0x20000)
+#define BL1_RW_BASE			(BL1_RO_LIMIT)		/* 1AC2_0000 */
 #define BL1_RW_SIZE			(0x00188000)
 #define BL1_RW_LIMIT			(0x1B000000)
 
